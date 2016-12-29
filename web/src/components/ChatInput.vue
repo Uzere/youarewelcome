@@ -2,7 +2,7 @@
 	<div class="chatInput input-group input-group-lg">
       <input type="text" class="form-control" placeholder="Введите сообщение" v-bind:value="message" v-on:input="handleInput" v-on:keyup.enter="handleSend">
       <span class="input-group-btn">
-        <button class="btn btn-primary" type="button" v-on:click="handleSend" v-bind:disabled="message==''">Send</button>
+        <button class="btn btn-primary" type="button" v-on:click="handleSend" v-bind:disabled="message==''"></button>
       </span>
     </div>
 </template>

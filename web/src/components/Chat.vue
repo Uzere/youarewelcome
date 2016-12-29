@@ -6,6 +6,9 @@
 			</div>
 		</chatLog>
 		<chatInput v-model="message" v-on:send="handle"></chatInput>
+		<audio ref="notify">
+			<source src="/static/notify.mp3" type="audio/mpeg">
+		</audio>
 	</div>
 </template>
 
@@ -42,6 +45,7 @@ export default {
 			this.typing = false
 
 			let resp = await Api.getAnswer(msg)
+			this.$refs.notify.play()
 			console.log(resp)
 			this.log.push(resp)
 		}
