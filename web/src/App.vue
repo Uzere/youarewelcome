@@ -19,7 +19,6 @@ export default {
 @import url(../node_modules/bootstrap/dist/css/bootstrap.css);
 
 #app {
-	/*background: #ddd;*/
 	width: 400px;
 	height: 600px;
 	margin: 60px auto 0;

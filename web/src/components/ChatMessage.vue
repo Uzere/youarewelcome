@@ -29,14 +29,11 @@ export default {
 }
 
 .chatMessage .message {
-	/*width: 360px;*/
 	padding: 5px;
 	margin: 1px 0 1px 30px;
-	/*float: left;*/
 }
 
 .chatMessage.outgoing { 
-	/*background-color: #f00; */
 	text-align: right;
 }
 
@@ -47,6 +44,5 @@ export default {
 
 .chatMessage.outgoing .message {
 	margin: 1px 30px 1px 0;
-	/*float: right;*/
 }
 </style>

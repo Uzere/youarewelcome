@@ -18,7 +18,7 @@ export default {
 		'log': function() {
 			this.$nextTick(() => {
 				let el = this.$refs.scroll
-				el.scrollTop = el.scrollHeight - el.clientHeight
+				el.scrollTop = el.scrollHeight - el.clientHeight // скролл вниз
 			})
 		}
 	}

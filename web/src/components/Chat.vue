@@ -32,21 +32,21 @@ export default {
 	},
 	methods: {
 		async handle() {
-			let msg = this.message
-			this.message = ''
 			function timeout(ms) {
 				return new Promise(resolve => setTimeout(resolve, ms))
 			}
 
+			let msg = this.message
+			this.message = ''
+
 			this.log.push({a: msg, isOutgoing: true})
 
 			this.typing = true
-			await timeout(1000)
+			await timeout(1000) // имитируем печать
 			this.typing = false
 
 			let resp = await Api.getAnswer(msg)
 			this.$refs.notify.play()
-			console.log(resp)
 			this.log.push(resp)
 		}
 	}

@@ -20,18 +20,15 @@ export default {
 	},
 	methods: {
 		handleInput(event) {
-			// let msg = this.message
 			this.message = event.target.value
 			this.$emit('input', this.message)
 		},
 		handleSend() {
-			// let msg = this.message
 			this.$emit('send')
 		}
 	},
 	watch: {
 		'value': function() {
-			console.log(this.value)
 			this.message = this.value
 		}
 	}
