@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<chat></chat>
+		<chat :delay="true" :sound="true"></chat>
 	</div>
 </template>
 

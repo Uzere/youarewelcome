@@ -23,6 +23,7 @@ export default {
 		ChatLog,
 		ChatInput
 	},
+	props: ['sound', 'delay'],
 	data() {
 		return {
 			message: '',
@@ -42,12 +43,13 @@ export default {
 			this.log.push({a: msg, isOutgoing: true})
 
 			this.typing = true
-			await timeout(1000) // имитируем печать
+			if (this.delay) { await timeout(1000) } // имитируем печать
 			this.typing = false
 
 			let resp = await Api.getAnswer(msg)
-			this.$refs.notify.play()
 			this.log.push(resp)
+
+			if (this.sound) { this.$refs.notify.play() }
 		}
 	}
 }
