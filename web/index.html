@@ -3,16 +3,18 @@
 <head>
   <meta charset="utf-8">
   <title>Огонь!</title>
-  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="shortcut icon" href="/static/favicon.ico" />
   <!-- это можно выкинуть и заменить своими стилями -->
-  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <link rel="stylesheet" type="text/css" href="/static/styles.css">
   <!-- например, можно заюзать Bootstrap: -->
   <!--<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css">-->
 </head>
 <body>
-  <p>Оно работает!<br /> Полдела сделано :)</p>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+  <p>Оно работает!!!<br /> Полдела сделано :)</p>
   <p><strong>Дано:</strong> сервер, который умеет API из одного вызова.<br/>
-    На входе одна фраза (вопрос), на выходе другая (ответ).<br/> Действующий макет:</p>
+    На входе одна фраза (вопрос), на выходе другая (ответ).<br/> Действующий макет:</p>
   <form
     class="form-inline"
     onsubmit="$.post('/api/get-answer', {q: this.q.value}).done(function(resp) {
@@ -56,7 +58,7 @@
     Про остальное лучше посоветоваться.</p>
 
   <p>...и чем проще, тем лучше:</p>
-  <p><img src="errors.jpg"></p>
+  <p><img src="/static/errors.jpg"></p>
 
   <!-- jQuery совершенно не обязателен. Вообще, весь этот файл дан просто для примера -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
