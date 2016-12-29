@@ -2,7 +2,9 @@
 	<div class="chatInput input-group input-group-lg">
       <input type="text" class="form-control" placeholder="Введите сообщение" v-bind:value="message" v-on:input="handleInput" v-on:keyup.enter="handleSend">
       <span class="input-group-btn">
-        <button class="btn btn-primary" type="button" v-on:click="handleSend" v-bind:disabled="message==''"></button>
+        <button class="btn btn-primary" type="button" v-on:click="handleSend" v-bind:disabled="message==''">
+        	<span class="glyphicon glyphicon-send leftFix"></span>
+        </button>
       </span>
     </div>
 </template>
@@ -39,5 +41,9 @@ export default {
 <style>
 .chatInput {
 	margin-top: 3px;
+}
+
+.chatInput .leftFix {
+	margin-left: -3px;
 }
 </style>
