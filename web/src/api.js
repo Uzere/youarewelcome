@@ -1,13 +1,3 @@
-// <form
-//   class="form-inline"
-//   onsubmit="$.post('/api/get-answer', {q: this.q.value}).done(function(resp) {
-//     if (resp.ok) {
-//       alert(resp.a)
-//     } else {
-//       console.log('ERR:', resp.error);
-//     }
-//   }); return false">
-
 export default {
 	async getAnswer(message) {
 		let data = new window.FormData()
